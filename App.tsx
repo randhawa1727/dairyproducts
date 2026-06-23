@@ -8,7 +8,7 @@ import Signup from './src/auth/Signup'
 import Setting from './src/screens/Setting'
 const App = () => {
   return (
-    <Homepage></Homepage>
+    <Homepage/>
     // <Profile></Profile>
     // <Loginpage></Loginpage>
     //  <Signup></Signup>
