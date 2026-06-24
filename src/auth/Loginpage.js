@@ -38,7 +38,6 @@ const Loginpage = () => {
 
          <View style={style.google}>
 
-          <Image style={style.googleimg} source={require('../assets/google.png')}/>
           <Text style={style.googletxt}>Google</Text>
 
          </View>
@@ -182,11 +181,7 @@ google:{
 googletxt:{
       marginTop:10,
       fontSize:20,
-},
-googleimg:{
-    width:40,
-    height:40,
-    marginTop:5,
+      marginLeft:3nb 5,
 },
 
 createnew:{
