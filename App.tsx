@@ -8,9 +8,9 @@ import Signup from './src/auth/Signup'
 import Setting from './src/screens/Setting'
 const App = () => {
   return (
-    <Homepage/>
+    // <Homepage/>
     // <Profile></Profile>
-    // <Loginpage></Loginpage>
+    <Loginpage></Loginpage>
     //  <Signup></Signup>
     // <Setting></Setting>
   )
