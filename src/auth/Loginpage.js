@@ -181,7 +181,7 @@ google:{
 googletxt:{
       marginTop:10,
       fontSize:20,
-      marginLeft:3nb 5,
+      marginLeft:5,
 },
 
 createnew:{
