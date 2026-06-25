@@ -18,7 +18,7 @@
 
 // export default App
 
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native'
+import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const App = () => {
@@ -260,7 +260,9 @@ const App = () => {
   const renderItem = ({ item }) => (
     <View style={style.cards}>
       <Text>{item.name}</Text>
+      <TouchableOpacity>
       <Text>{item.email}</Text>
+      </TouchableOpacity>
     </View>
   )
 
@@ -284,11 +286,16 @@ const style = StyleSheet.create({
     backgroundColor: "yellow",
     width: "100%",
     height: "100%",
-
+    
   },
   cards:{
     marginTop:12,
     backgroundColor:"#ffff",
+    borderRadius:20,
+    width:180,
+    height:"auto",
+    alignItems:"center",
+   gap:12,    
     
   }
 
