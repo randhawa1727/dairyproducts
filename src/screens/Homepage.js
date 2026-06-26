@@ -2,7 +2,7 @@ import { View, Text,ScrollView,TextInput,TouchableOpacity,Image,StyleSheet } fro
 import React from 'react'
 
 const arr=["All","Ghee","Milk","Curd","Butter","Panner","Lassi","Packs"]
-const Homepage = () => {
+const Homepage = ({navigation}) => {
   return (
     <View style={style.container}>
       <View style={style.heading}>
@@ -18,6 +18,9 @@ const Homepage = () => {
         </TouchableOpacity>
         <TouchableOpacity>
           <Image style={style.cartimg}source={require("../assets/cart.png")}/>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate("Setting")}>
+          <Image style={style.setting} source={require("../assets/setting.png")}/>
         </TouchableOpacity>
         </View>
       </View>
@@ -74,8 +77,8 @@ const Homepage = () => {
    <TouchableOpacity>
    <Image style={style.home}source={require("../assets/handshake.png")}/>
    </TouchableOpacity>
-   <TouchableOpacity>
-   <Image style={style.home}source={require("../assets/profile.png")}/>
+   <TouchableOpacity onPress={()=>navigation.navigate("Profile")}>
+   <Image style={style.home}source={require("../assets/profile.png")} />
   </TouchableOpacity>
 </View>
 <View style={style.navigationtxt}>
@@ -127,6 +130,12 @@ bellimg:{
   height:30,
   top:12,
 
+},
+setting:{
+  width:30,
+  height:30,
+  top:12,
+  paddingHorizontal:15,
 },
 iconstop:{
   flexDirection:"row",

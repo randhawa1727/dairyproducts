@@ -2,7 +2,7 @@ import { View, Text , StyleSheet,ScrollView,TouchableOpacity, TextInput, Button,
 import React from 'react'
 
 
-const Loginpage = () => {
+const Loginpage = ({navigation}) => {
 
   return (
     <View style={{flex:1,backgroundColor:"#fef7d7"}}>
@@ -26,7 +26,7 @@ const Loginpage = () => {
          </TouchableOpacity>
 </View>
 
-         <TouchableOpacity style={style.touchsignin}>
+         <TouchableOpacity style={style.touchsignin} onPress={()=>navigation.navigate("Homepage")}>
           <View style={style.signbutton}>
             <Text style={style.signintxt}>Signin</Text>
           </View>
