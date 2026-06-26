@@ -524,18 +524,19 @@ import LinearGradient from 'react-native-linear-gradient'
 const Setting = () => {
 
   const setting=[
-    {
-      "id": 1,
-      "img":require('../assets/userprofile.png'),
-      "title":"Sahil",
-      "gmail":"sahil@gmaail.com",
-      
-    },
+   
+{
+  "id":"h1",
+  "title":"PERSONAL",
+  "subtitle":"Your identity and account",
+  type:"header",
 
+},
     {
       "id":2,
       "img":require('../assets/profile.png'),
       "title":"Edit Profile",
+      type:"setting",
 
     },
 
@@ -543,43 +544,93 @@ const Setting = () => {
       "id":3,
       "img":require('../assets/people.png'),
       "title":"sahil1234",
+      type:"setting",
     },
     {
       "id":4,
       "title":"sahil@gmial.com",
       "img":require('../assets/email.png'),
-
+type:"setting",
     },
     {
       "id":5,
       "title":"Phone Number",
       "img":require('../assets/telephone.png'),
-      
+      type:"setting",
+    },
+    {
+      "id":6,
+      "title":"Change password",
+      "img":require('../assets/password.png'),
+      type:"setting",
+    },
+    {
+      "id":7,
+      "title":"Personal information",
+      "img":require('../assets/info.png'),
+      type:"setting",
     },
     
   ]
-  const renderItem=({item})=>(
-    <View style={style.profile}> 
-     <Image style={style.userimg} source={item.img}  />
-     <Text style={style.title}>{item.title}</Text>
 
-     
-    </View>
-  )
+  const privacy=[
+    {
+      "id":"h2",
+      "subtitle":"Control who see you",
+      type:"header",
+
+    },
+    {
+      "id":8,
+      "title2":"Private account",
+      type:"privacy",
+    },
+    {
+      "id":9,
+      "title2":"Activity status",
+       type:"privacy",
+    },
+    {
+      "id":10,
+      "title2":"Two-factor auth",
+       type:"privacy",
+    },
+    {
+      "id":11,
+       type:"privacy",
+    },
+    {
+      "id":12,
+       type:"privacy",
+    },
+    {
+      "id":13,
+       type:"privacy",
+    }
+  ]
+  const renderItem=({item})=>{
+   if(item.type==="header") 
+    return(
+     <View style={style.headerconatiner}> 
+     <Text style={style.header}>{item.header}</Text>
+     <Text style={style.subtitle}>{item.subtitle}</Text>
+      </View>
+    )
+   
+  }
 
 
   return (
     <View style={style.bg}>
-
       <View style={style.setting}>
         <Text style={style.settingtxt}>Setting</Text>
       </View>
 
     <FlatList
-      data={setting}
-      keyExtractor={item=>item.id}
-      renderItem={renderItem}
-
+     data={[...setting,...privacy]}
+     keyExtractor={item.id}
+     renderItem={renderItem}
+  
     />
 
     </View>
@@ -592,46 +643,17 @@ export default Setting
 
 const style=StyleSheet.create({
 
-  bg:{
-    backgroundColor:"#3232BA",
-    flex:1,
-  },
-  userimg:{
-    height:30,
-    width:30,
-    color:"rgba(241, 20, 20, 0.87)",
-  },
+bg:{
+  flex:1,
+  backgroundColor:"#1b1d6d",
+},
+setting:{
+  width:"100%",
+},
+settingtxt:{
+  fontSize:24,
+  color:"#fff",
+},
 
-  setting:{
-    width:"100%",
-    height:60,
-    marginTop:60,
-    padding:12,
-  },
-  settingtxt:{
-    fontSize:22,
-  },
-
-  profile:{
-    backgroundColor:"#d3d3",
-    flexDirection:"row",
-    width:"90%",
-    height:70,
-    borderRadius:20,
-    alignSelf:"center",
-    marginTop:5,
-    padding:15,
-    flexDirection:"row",
-
-    
-  },
-
-  title:{
-    color:"#dbd3d3",
-    fontSize:15,
-
-  }
 
 })
-
-

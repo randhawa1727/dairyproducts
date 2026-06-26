@@ -51,9 +51,6 @@ const Loginpage = () => {
          </View>
                
             </View>
-
-           
-
     </View>
   )
 }
