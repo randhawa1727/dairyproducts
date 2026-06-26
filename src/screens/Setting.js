@@ -516,7 +516,7 @@
 
 // })
 
-import { View, Text ,StyleSheet,Image,FlatList,TouchableOpacity } from 'react-native'
+import { View, Text ,StyleSheet,Image,FlatList,TouchableOpacity,ImageBackground } from 'react-native'
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 
@@ -526,14 +526,39 @@ const Setting = () => {
   const setting=[
     {
       "id": 1,
-      "url":require('../assets/userprofile.png'),
+      "img":require('../assets/userprofile.png'),
+      "user":"Sahil",
+      "gmail":"sahil@gmaail.com",
+      
+    },
+
+    {
+      "id":2,
+      "img":require(),
+      "edit":"Edit Profile",
 
     },
+
+    {
+      "id":3,
+      "img":require(),
+      "username":"sahil1234",
+    },
+    {
+      "id":4,
+      "email":"sahil@gmial.com",
+
+    },
+    {
+      "id":5,
+      "number":"Phone Number",
+      
+    }
     
   ]
   const renderItem=({item})=>(
     <View style={style.profile}> 
-     <Image>{item.url}</Image>
+     <Image style={style.userimg} source={item.img}  />
      
     </View>
   )
@@ -541,13 +566,21 @@ const Setting = () => {
 
   return (
     <View style={style.bg}>
+
+      <View style={style.setting}>
+        <Text style={style.settingtxt}>Setting</Text>
+      </View>
+
     <FlatList
       data={setting}
       keyExtractor={item=>item.id}
       renderItem={renderItem}
 
     />
+
     </View>
+   
+  
   )
 }
 
@@ -559,14 +592,27 @@ const style=StyleSheet.create({
     backgroundColor:"#3232BA",
     flex:1,
   },
+  userimg:{
+    height:60,
+    width:60,
+  },
+
+  setting:{
+    width:"100%",
+    height:60,
+    marginTop:60,
+    padding:12,
+  },
+  settingtxt:{
+    fontSize:22,
+  },
 
   profile:{
-    backgroundColor:"yellow",
-    height:100
-    ,width:100,
-  alignSelf:"center",
-
+    backgroundColor:"#d3d3",
+    flexDirection:"row",
+    
   }
+
 })
 
 
