@@ -534,26 +534,28 @@ const Setting = () => {
 
     {
       "id":2,
-      "img":require(),
+      "img":require('../assets/profile.png'),
       "edit":"Edit Profile",
 
     },
 
     {
       "id":3,
-      "img":require(),
+      "img":require('../assets/people.png'),
       "username":"sahil1234",
     },
     {
       "id":4,
       "email":"sahil@gmial.com",
+      "img":require('../assets/email.png'),
 
     },
     {
       "id":5,
       "number":"Phone Number",
+      "img":require('../assets/telephone.png'),
       
-    }
+    },
     
   ]
   const renderItem=({item})=>(
