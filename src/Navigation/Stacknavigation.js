@@ -1,11 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Loginpage from '../auth/Loginpage'
 
 const Stacknavigation = () => {
+    const Stack = createNativeStackNavigator()
   return (
-    <View>
-      <Text>Stacknavigation</Text>
-    </View>
+
+            <Stack.Screen Name="Loginpage" component={Loginpage}/>
+       
+   
   )
 }
 

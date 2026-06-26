@@ -10,9 +10,9 @@ const App = () => {
   return (
     // <Homepage/>
     // <Profile></Profile>
-    // <Loginpage></Loginpage>
+    <Loginpage></Loginpage>
     //  <Signup></Signup>
-    <Setting></Setting>
+    // <Setting></Setting>
   )
 }
 

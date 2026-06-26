@@ -527,7 +527,7 @@ const Setting = () => {
     {
       "id": 1,
       "img":require('../assets/userprofile.png'),
-      "user":"Sahil",
+      "title":"Sahil",
       "gmail":"sahil@gmaail.com",
       
     },
@@ -535,24 +535,24 @@ const Setting = () => {
     {
       "id":2,
       "img":require('../assets/profile.png'),
-      "edit":"Edit Profile",
+      "title":"Edit Profile",
 
     },
 
     {
       "id":3,
       "img":require('../assets/people.png'),
-      "username":"sahil1234",
+      "title":"sahil1234",
     },
     {
       "id":4,
-      "email":"sahil@gmial.com",
+      "title":"sahil@gmial.com",
       "img":require('../assets/email.png'),
 
     },
     {
       "id":5,
-      "number":"Phone Number",
+      "title":"Phone Number",
       "img":require('../assets/telephone.png'),
       
     },
@@ -561,6 +561,8 @@ const Setting = () => {
   const renderItem=({item})=>(
     <View style={style.profile}> 
      <Image style={style.userimg} source={item.img}  />
+     <Text style={style.title}>{item.title}</Text>
+
      
     </View>
   )
@@ -595,8 +597,9 @@ const style=StyleSheet.create({
     flex:1,
   },
   userimg:{
-    height:60,
-    width:60,
+    height:30,
+    width:30,
+    color:"rgba(241, 20, 20, 0.87)",
   },
 
   setting:{
@@ -612,7 +615,21 @@ const style=StyleSheet.create({
   profile:{
     backgroundColor:"#d3d3",
     flexDirection:"row",
+    width:"90%",
+    height:70,
+    borderRadius:20,
+    alignSelf:"center",
+    marginTop:5,
+    padding:15,
+    flexDirection:"row",
+
     
+  },
+
+  title:{
+    color:"#dbd3d3",
+    fontSize:15,
+
   }
 
 })
