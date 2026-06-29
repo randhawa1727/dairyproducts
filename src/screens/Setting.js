@@ -75,37 +75,43 @@ type:"setting",
       "id":8,
       "title":"Private account",
       type:"privacy",
-      "arrow":">"
+      "arrow":">",
+      "img":require('../assets/security.png')
     },
     {
       "id":9,
       "title":"Activity status",
        type:"privacy",
-       "arrow":">"
+       "arrow":">",
+       "img":require('../assets/graph.png')
     },
     {
       "id":10,
       "title":"Two-factor auth",
        type:"privacy",
-       "arrow":">"
+       "arrow":">",
+       "img":require('../assets/two-factor-authentication.png')
     },
     {
       "id":11,
       "title":"Blocked account",
        type:"privacy",
-       "arrow":">"
+       "arrow":">",
+       "img":require('../assets/block-user.png')
     },
     {
       "id":12,
       "title":"Restrickted account",
        type:"privacy",
-       "arrow":">"
+       "arrow":">",
+       "img":require('../assets/not-allowed.png')
     },
     {
       "id":13,
       "title":"Privacy policy",
        type:"privacy",
-       "arrow":">"
+       "arrow":">",
+       "img":require('../assets/file.png')
     }
   ]
 
@@ -176,6 +182,7 @@ type:"setting",
       if(item.type==="privacy")
         return(
       <TouchableOpacity style={style.container2}>
+        <Image style={style.image} source={item.img}/>
       <Text style={style.title}>{item.title}</Text>
       
       </TouchableOpacity>
@@ -285,6 +292,6 @@ container3:{
   marginTop:10,
   paddingVertical:15,
   paddingHorizontal:12,
-},
+},  
 
 })

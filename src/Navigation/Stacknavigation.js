@@ -15,7 +15,7 @@ const Stacknavigation = () => {
             <Stack.Screen name="Loginpage" component={Loginpage} />
             <Stack.Screen name="Homepage" component={Homepage}/>
             <Stack.Screen name="Profile" component={Profile}/>
-            <Stack.Screen nmae="Setting" component={Setting}/>
+            <Stack.Screen name="Setting" component={Setting}/>
 
         </Stack.Navigator>
     )

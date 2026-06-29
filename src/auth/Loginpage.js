@@ -45,7 +45,7 @@ const Loginpage = ({navigation}) => {
 
         <View style={style.createnew}>
           <Text>New to Kheer ?</Text>
-           <TouchableOpacity>
+           <TouchableOpacity onPress={()=>navigation.navigate("Signup")}>
       <Text style={style.createnewtxt}>  Create new account</Text>
          </TouchableOpacity>
          </View>
