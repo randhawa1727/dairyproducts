@@ -19,9 +19,6 @@ const Homepage = ({navigation}) => {
         <TouchableOpacity>
           <Image style={style.cartimg}source={require("../assets/cart.png")}/>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>navigation.navigate("Setting")}>
-          <Image style={style.setting} source={require("../assets/setting.png")}/>
-        </TouchableOpacity>
         </View>
       </View>
         <Text style={style.morning}>Good Morning, User</Text>
@@ -66,7 +63,7 @@ const Homepage = ({navigation}) => {
 
 </ScrollView>
 
-<View style={style.navigationbar1}>
+{/* <View style={style.navigationbar1}>
   <View style={style.navigationicons}>
   <TouchableOpacity>
   <Image style={style.home}source={require("../assets/home.png")}/>
@@ -93,7 +90,7 @@ const Homepage = ({navigation}) => {
   <Text>Profile</Text>
 
 </View>
-</View>
+</View> */}
 
     </View>
   )
@@ -250,23 +247,23 @@ content:{
   width:"100%",
   height:"auto",
 },
-navigationbar1:{
- backgroundColor:"#fff",
- width:"100%",
-  height:110,
-},
+// navigationbar1:{
+//  backgroundColor:"#fff",
+//  width:"100%",
+//   height:110,
+// },
 
-navigationicons:{
-  flexDirection:"row",
-  justifyContent:"space-around",
-  paddingTop:12,
-},
-home:{
-  width:50,
-  height:50,
-},
-navigationtxt:{
-  flexDirection:"row",
-  justifyContent:"space-around",
-}
+// navigationicons:{
+//   flexDirection:"row",
+//   justifyContent:"space-around",
+//   paddingTop:12,
+// },
+// home:{
+//   width:50,
+//   height:50,
+// },
+// navigationtxt:{
+//   flexDirection:"row",
+//   justifyContent:"space-around",
+// }
 })

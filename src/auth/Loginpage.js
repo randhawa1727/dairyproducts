@@ -26,7 +26,7 @@ const Loginpage = ({navigation}) => {
          </TouchableOpacity>
 </View>
 
-         <TouchableOpacity style={style.touchsignin} onPress={()=>navigation.navigate("Homepage")}>
+         <TouchableOpacity style={style.touchsignin} onPress={()=>navigation.navigate("Tab")}>
           <View style={style.signbutton}>
             <Text style={style.signintxt}>Signin</Text>
           </View>

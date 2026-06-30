@@ -10,10 +10,8 @@ const App = () => {
   return (
    
       //  <Setting></Setting>
-    // <NavigationContainer>
-    //   <Stacknavigation/>
-    // </NavigationContainer>
-    <Apifetching></Apifetching>
+      <Stacknavigation/>
+    // <Apifetching></Apifetching>
   )
 }
 
