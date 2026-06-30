@@ -8,9 +8,9 @@ import Profile from '../screens/Profile'
 import Setting from '../screens/Setting'
 const Stacknavigation = () => {
 
-    const Stack = createNativeStackNavigator()
+    const Stack = createNativeStackNavigator();
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerShown:false}}>
 
             <Stack.Screen name="Loginpage" component={Loginpage} />
             <Stack.Screen name="Homepage" component={Homepage}/>
