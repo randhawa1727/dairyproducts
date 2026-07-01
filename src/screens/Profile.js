@@ -1,7 +1,7 @@
 import { View, Text,StyleSheet,TouchableOpacity,ScrollView,Image } from 'react-native'
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   return (
     <View style={style.profile}>
     <Text style={style.profiletxt}>Profile</Text>
@@ -119,7 +119,7 @@ const Profile = () => {
 
 
 
-<TouchableOpacity>
+<TouchableOpacity onPress={()=>navigation.navigate("Loginpage")}>
 <View style={style.signout}>
     <View style={style.signoutbg}>
 <Image style={style.signoutimg}source={require('../assets/signout.png')}/> 

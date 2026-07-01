@@ -11,6 +11,7 @@ const Tabnavigation = () => {
         <Tab.Screen name="Home" component={Homepage}/>
         <Tab.Screen name="Profile" component={Profile}/>
         <Tab.Screen name="Setting" component={Setting}/>
+        
     </Tab.Navigator>
   )
 }
